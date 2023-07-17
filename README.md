@@ -20,7 +20,8 @@ Not really enough data below to come to a conclusion of the
 trend in the data compared to variation between optimisations, but AdamW
 seems to perform better for generalisation, as expected from the literature,
 and unfreezing the Conv2D layer may be helpful compared to just the 
-classifier layer ... but I've not done enough calculations to be sure. 
+classifier layer ... but I've not done enough calculations to be sure 
+and there are more interesting problems to play with right now.  
 
  transfer_learning_basics.ipynb shows freezing the classifier layer and 
  retraining the network, followed by saving the output. Adam was used
@@ -55,6 +56,8 @@ Epoch: 1 | train_loss: 0.5668 | train_acc: 0.7833 | test_loss: 0.3417 | test_acc
 Epoch: 2 | train_loss: 0.3240 | train_acc: 0.9208 | test_loss: 0.2929 | test_acc: 0.9068
 Epoch: 3 | train_loss: 0.2593 | train_acc: 0.8917 | test_loss: 0.2442 | test_acc: 0.9318
 Epoch: 4 | train_loss: 0.2300 | train_acc: 0.9167 | test_loss: 0.2277 | test_acc: 0.9443
+Epoch: 1 | train_loss: 0.1643 | train_acc: 0.9792 | test_loss: 0.2160 | test_acc: 0.9193
+Epoch: 2 | train_loss: 0.2054 | train_acc: 0.9125 | test_loss: 0.1794 | test_acc: 0.9250
 
 transfer_learning_basics_reloading_original_model_AdamW.ipynb
 starting from the first model after the first five epochs of training,
