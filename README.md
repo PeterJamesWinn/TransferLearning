@@ -15,6 +15,10 @@
  training data consisting of 78 images of pizza, 75 of steak and 72 of 
  sushi. 
  The test set has 25 images of pizza, 19 of steak and 31 of sushi. 
+ For the last experiment I fixed the report of the training loss and accuracy,
+ which, in the original tutorial, are the average over the batches 
+ during the epoch. In the last calculation (transfer_learning_basics_reloading_original_model_AdamW_second_repeat.ipynb) I added an evaluation of the training data at the end of the epoch
+ too, which indicates better an over training effect in the later epochs.
 
 Not really enough data below to come to a conclusion of the
 trend in the data compared to variation between optimisations, but AdamW
@@ -76,3 +80,10 @@ Epoch: 1 | train_loss: 0.5668 | train_acc: 0.7833 | test_loss: 0.3418 | test_acc
 Epoch: 2 | train_loss: 0.3241 | train_acc: 0.9208 | test_loss: 0.2930 | test_acc: 0.9068
 Epoch: 3 | train_loss: 0.2593 | train_acc: 0.8917 | test_loss: 0.2442 | test_acc: 0.9318
 Epoch: 4 | train_loss: 0.2300 | train_acc: 0.9167 | test_loss: 0.2277 | test_acc: 0.9443
+Rerun above but fixing the train loss and accuracy to be value at end of
+epoch instead of the running average over batches during the epoch, which
+shows training to be slightly better than test results:
+Epoch: 1 | running_train_loss: 0.5668 | running_train_acc: 0.7833 | test_loss: 0.3418 | test_acc: 0.9250 |epoch_train_loss: 0.2163 | epoch_train_acc: 0.9625 
+Epoch: 2 | running_train_loss: 0.3743 | running_train_acc: 0.8500 | test_loss: 0.3750 | test_acc: 0.8580 |epoch_train_loss: 0.1452 | epoch_train_acc: 0.9875 
+Epoch: 3 | running_train_loss: 0.2195 | running_train_acc: 0.9125 | test_loss: 0.2442 | test_acc: 0.9568 |epoch_train_loss: 0.0612 | epoch_train_acc: 1.0000 
+Epoch: 4 | running_train_loss: 0.1758 | running_train_acc: 0.9167 | test_loss: 0.2170 | test_acc: 0.9375 |epoch_train_loss: 0.0359 | epoch_train_acc: 1.0000 
